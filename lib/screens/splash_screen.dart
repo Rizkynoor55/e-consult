@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:econsult/home_view.dart';
+import 'package:econsult/home/home_view.dart';
 import 'dart:async';
 
 class SplashScreenPage extends StatefulWidget {
@@ -16,7 +16,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   }
 
   startSplashScreen() async {
-    var duration = const Duration(seconds: 5);
+    var duration = const Duration(seconds: 2);
     return Timer(duration, () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) {
@@ -28,13 +28,12 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
 
   @override
   Widget build(BuildContext context) {
-  return Scaffold(
-    backgroundColor: Color(0xffffff),
-    body: Center(
-      child: Image.asset(
-        "assets/images/econt.png",
-        width: 400.0,
-        height: 200.0,
+  return new Scaffold(
+    body: new Center(
+      child: new Image.asset(
+        "assets/econt.png",
+          height: 400.0,
+          width: 200.0,
       ),
     ),
   );
